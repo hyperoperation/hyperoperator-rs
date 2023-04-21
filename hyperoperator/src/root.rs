@@ -1,22 +1,23 @@
 use crate::pow::PrimitiveFloatHyperPow;
 
+/// Trait for primitive (built-in types) [`Sized`] that supports hyper (super) root.
 pub trait HyperRoot {
     /// Returns the hyper square root of a number.
     ///
-    /// Returns NaN if self is a negative number other than -0.0.
+    /// Returns `NaN` if self is a negative number other than `-0.0`.
     ///
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
     /// use num_bigfloat::BigFloat;
-    /// use hyperoperator::HyperRoot;
+    /// use hyperoperator::root::HyperRoot;
     ///
     /// # fn main() {
     /// let a = BigFloat::parse("27.0").unwrap();
@@ -31,20 +32,20 @@ pub trait HyperRoot {
         Self: Sized;
     /// Returns the hyper cube root of a number.
     ///
-    /// Returns NaN if self is a negative number other than -0.0.
+    /// Returns `NaN` if self is a negative number other than `-0.0`.
     ///
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
     /// use num_bigfloat::BigFloat;
-    /// use hyperoperator::HyperRoot;
+    /// use hyperoperator::root::HyperRoot;
     ///
     /// # fn main() {
     /// let a = BigFloat::parse("1.7").unwrap();
@@ -57,20 +58,20 @@ pub trait HyperRoot {
         Self: Sized;
     /// Returns the hyper n-th root of a number.
     ///
-    /// Returns NaN if self is a negative number other than -0.0.
+    /// Returns `NaN` if self is a negative number other than `-0.0`.
     ///
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
     /// use num_bigfloat::BigFloat;
-    /// use hyperoperator::HyperRoot;
+    /// use hyperoperator::root::HyperRoot;
     ///
     /// # fn main() {
     /// let a = BigFloat::parse("1.2").unwrap();

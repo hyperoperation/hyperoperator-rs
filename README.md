@@ -11,7 +11,7 @@ See the article from wikipedia: https://en.wikipedia.org/wiki/Hyperoperation
 You can use primitive Rust types for hyperoperations:
 
 ```
-use hyperoperator::PrimitiveUintHyperPow;
+use hyperoperator::pow::PrimitiveUintHyperPow;
 
 fn main() {
     let a: u64 = 3;
@@ -26,7 +26,7 @@ BigUint:
 
 ```
 use num_bigint::ToBigUint;
-use hyperoperator::HyperPow;
+use hyperoperator::pow::HyperPow;
 use num_bigint::BigUint;
 use std::str::FromStr;
 
@@ -41,7 +41,7 @@ BigFloat:
 
 ```
 use num_bigfloat::BigFloat;
-use hyperoperator::HyperPow;
+use hyperoperator::pow::HyperPow;
 
 fn main() {
 let a = BigFloat::parse("2.4").unwrap();
@@ -58,7 +58,7 @@ There are some constants, that can be computed by the library:
 
 ```
 use num_bigfloat::BigFloat;
-use hyperoperator::HyperPow;
+use hyperoperator::pow::HyperPow;
 
 fn main() {
     let a = BigFloat::from_f64(std::f64::consts::E);
@@ -72,7 +72,7 @@ fn main() {
 
 ```
 use num_bigfloat::BigFloat;
-use hyperoperator::HyperPow;
+use hyperoperator::pow::HyperPow;
 
 fn main() {
     let a = BigFloat::from_f64(std::f64::consts::PI);
@@ -86,7 +86,7 @@ fn main() {
 
 ```
 use num_bigfloat::BigFloat;
-use hyperoperator::HyperPow;
+use hyperoperator::pow::HyperPow;
 
 fn main() {
     let a = BigFloat::from_f64(std::f64::consts::E);

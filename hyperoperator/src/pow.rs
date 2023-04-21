@@ -6,15 +6,15 @@ pub trait PrimitiveUintHyperPow {
     /// Computes self.hyperpow(exp), wrapping around at the boundary of the type.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
     /// ...
     ///
     /// ```
-    /// use hyperoperator::PrimitiveUintHyperPow;
+    /// use hyperoperator::pow::PrimitiveUintHyperPow;
     ///
     /// # fn main() {
     /// let a: u64 = 3;
@@ -30,15 +30,15 @@ pub trait PrimitiveUintHyperPow {
     /// Computes self.hyperpow(exp), returning None if overflow occurred.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
-    /// use hyperoperator::PrimitiveUintHyperPow;
+    /// use hyperoperator::pow::PrimitiveUintHyperPow;
     ///
     /// # fn main() {
     /// let a: u64 = 2;
@@ -120,15 +120,15 @@ pub trait PrimitiveFloatHyperPow {
     /// so the results are not guaranteed to agree.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
-    /// use hyperoperator::PrimitiveFloatHyperPow;
+    /// use hyperoperator::pow::PrimitiveFloatHyperPow;
     ///
     /// # fn main() {
     /// assert_eq!(2.0_f64.hyperpowi(4, 2), 65536.0);
@@ -142,15 +142,15 @@ pub trait PrimitiveFloatHyperPow {
     /// Raises a number to a floating point hyper power.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
-    /// use hyperoperator::PrimitiveFloatHyperPow;
+    /// use hyperoperator::pow::PrimitiveFloatHyperPow;
     ///
     /// # fn main() {
     /// assert_eq!(2.0_f64.hyperpowf(3.0, 2), 16.0);
@@ -164,15 +164,15 @@ pub trait PrimitiveFloatHyperPow {
     /// Returns `self.hyperpow(e, n)`, (the hyper exponential function).
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
-    /// use hyperoperator::PrimitiveFloatHyperPow;
+    /// use hyperoperator::pow::PrimitiveFloatHyperPow;
     ///
     /// # fn main() {
     /// assert_eq!(2.0_f64.hyperexp(2), 15.154262241479259);
@@ -267,7 +267,7 @@ hyperpow_float_impl!(f64);
 ///
 /// ```
 /// use num_bigint::ToBigUint;
-/// use hyperoperator::HyperPow;
+/// use hyperoperator::pow::HyperPow;
 /// use num_bigint::BigUint;
 /// use std::str::FromStr;
 ///
@@ -282,7 +282,7 @@ hyperpow_float_impl!(f64);
 ///
 /// ```
 /// use num_bigfloat::BigFloat;
-/// use hyperoperator::HyperPow;
+/// use hyperoperator::pow::HyperPow;
 ///
 /// # fn main() {
 /// let a = BigFloat::parse("2.4").unwrap();
@@ -295,12 +295,12 @@ pub trait HyperPow<T> {
     /// Raises self to the hyper power of `exponent`
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     fn hyperpow(self, exponent: T, n: u8) -> Self
     where

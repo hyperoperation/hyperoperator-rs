@@ -1,5 +1,6 @@
 use crate::pow::PrimitiveFloatHyperPow;
 
+/// Trait for primitive (built-in types) [`Sized`] that supports hyper (super) log.
 pub trait HyperLog {
     /// Returns the hyper natural logarithm of the number.
     ///
@@ -7,17 +8,16 @@ pub trait HyperLog {
     ///
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
-    /// ...
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
+    /// - ...
     ///
     /// ```
     /// use num_bigfloat::BigFloat;
-    /// use hyperoperator::HyperLog;
-    /// use hyperoperator::HyperPow;
+    /// use hyperoperator::log::HyperLog;
     ///
     /// # fn main() {
     /// let a = BigFloat::parse("1.2").unwrap();
@@ -31,11 +31,11 @@ pub trait HyperLog {
     /// Returns the hyper logarithm of the number with respect to an arbitrary base.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
     /// ...
     ///
     /// WARNING: Returns an approximate result
@@ -45,11 +45,11 @@ pub trait HyperLog {
     /// Returns the base 2 hyper logarithm of the number.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
     /// ...
     ///
     /// WARNING: Returns an approximate result
@@ -59,11 +59,11 @@ pub trait HyperLog {
     /// Returns the base 10 hyper logarithm of the number.
     ///
     /// `n` parameter:
-    /// n = 0 - exponentiation
-    /// n = 1 - exponentiation
-    /// n = 2 - tetration
-    /// n = 3 - pentation
-    /// n = 4 - hexation
+    /// - n = 0 - exponentiation
+    /// - n = 1 - exponentiation
+    /// - n = 2 - tetration
+    /// - n = 3 - pentation
+    /// - n = 4 - hexation
     /// ...
     ///
     /// WARNING: Returns an approximate result

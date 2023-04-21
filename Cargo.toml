@@ -4,7 +4,7 @@ members = [
 ]
 
 [workspace.package]
-version = "1.0.0"
+version = "1.0.1"
 homepage = "https://github.com/hyperoperation/hyperoperator-rs"
 repository = "https://github.com/hyperoperation/hyperoperator-rs"
 authors = ["izveigor"]

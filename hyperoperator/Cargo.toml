@@ -1,0 +1,31 @@
+[package]
+name = "hyperoperator"
+version = { workspace = true }
+description = "Rust implementation of hyperoperation"
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+keywords = ["hyperoperator"]
+include = [
+    "benches/*.rs",
+    "src/**/*.rs",
+    "tests/*.rs",
+    "Cargo.toml",
+]
+edition = { workspace = true }
+rust-version = { workspace = true }
+
+[lib]
+name = "hyperoperator"
+path = "src/lib.rs"
+bench = false
+
+[features]
+num_bigint = ["num-bigint", "num-traits"]
+num_bigfloat = ["num-bigfloat", "num-traits"]
+
+[dependencies]
+num-bigint = { version="0.4.3", optional = true }
+num-traits = { version="0.2.15", optional = true }
+num-bigfloat = { version="1.6.2", optional = true }

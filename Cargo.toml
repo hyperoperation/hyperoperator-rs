@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "hyperoperator",
+]
+
+[workspace.package]
+version = "1.0.0"
+homepage = "https://github.com/hyperoperation/hyperoperator-rs"
+repository = "https://github.com/hyperoperation/hyperoperator-rs"
+authors = ["izveigor"]
+license = "MIT"
+keywords = ["hyperoperator"]
+include = [
+    "benches/*.rs",
+    "src/**/*.rs",
+    "Cargo.toml",
+]
+edition = "2021"
+rust-version = "1.62"
+
+[workspace.dependencies]
+hyperoperator = { version = "1.0.0", path = "./hyperoperator", default-features = false }

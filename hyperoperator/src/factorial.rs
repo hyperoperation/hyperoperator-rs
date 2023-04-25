@@ -115,7 +115,6 @@ impl HyperFactorial for BigUint {
         while number <= self {
             result *= number.clone().hyperpow(number.clone(), n);
             number += 1_u8;
-            println!("ASD: {0}, {1}", result, number);
         }
         result
     }

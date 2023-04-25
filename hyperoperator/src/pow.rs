@@ -1,6 +1,6 @@
 use crate::root::HyperRoot;
 
-/// Trait for primitive (built-in types) [`Sized`] that adds wrapping and checked hyper exponentiation.
+/// Trait for unsigned integers that adds wrapping and checked hyper exponentiation.
 pub trait PrimitiveUintHyperPow {
     /// Wrapping (modular) hyper exponentiation.
     /// Computes self.hyperpow(exp), wrapping around at the boundary of the type.
@@ -112,6 +112,7 @@ hyperpow_unsigned_integer_impl!(u64);
 hyperpow_unsigned_integer_impl!(u128);
 hyperpow_unsigned_integer_impl!(usize);
 
+/// Trait for floats that supports hyper exponentiation.
 pub trait PrimitiveFloatHyperPow {
     /// Raises a number to an integer hyper power.
     ///

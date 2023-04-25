@@ -1,0 +1,56 @@
+name: hyperoperator
+
+concurrency:
+  group: ${{ github.repository }}-${{ github.head_ref || github.sha }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    paths:
+      - .github/**
+      - hyperoperator/**
+
+jobs:
+  test:
+    name: Cargo test
+    runs-on: ubuntu-latest
+    container:
+      image: amd64/rust
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Test hyperoperator with all features
+        run: cargo test -p hyperoperator --lib --all-features
+  
+  clippy:
+    name: Cargo clippy
+    runs-on: ubuntu-latest
+    container:
+      image: amd64/rust
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Install Clippy
+        run: rustup component add clippy
+      - name: Clippy hyperoperator with all features
+        run: cargo clippy -p hyperoperator --all-features
+  
+  fmt:
+    name: Cargo fmt
+    runs-on: ubuntu-latest
+    container:
+      image: amd64/rust
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup rustfmt
+        run: rustup component add rustfmt
+      - name: Run
+        run: cargo fmt --all -- --check
